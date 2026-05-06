@@ -11,7 +11,9 @@
 
 <body class="fondo-grilla">
     <nav class="top-navbar">
-        <a href="#" class="nav-logo">PA</a>
+        <div class="frog-logo-container">
+            <img src="../assets/frof_f.svg" id="frog1" alt="Sapito 1" class="sapito-clickeable">
+        </div>
 
         <ul class="nav-links">
             <li><a href="#inicio" class="active">Inicio</a></li>
@@ -152,7 +154,11 @@
         </div>
 
         <div class="proyectos-contenedor">
-
+            <div class="frog-oculto">
+                <div>
+                    <img src="../assets/frog.svg" id="frog2" alt="Sapito 1" class="sapito-clickeable oculto">
+                </div>
+            </div>
             <!-- TARJETA 2: NUMBERBLOCKS -->
             <div class="tarjeta-proyecto">
                 <div class="proyecto-contenido">
@@ -226,15 +232,19 @@
                         <div class="modal-seccion">
                             <h3>✔️ Funcionalidades destacadas</h3>
                             <ul>
-                                <li>Motor "4 en Línea": Lógica de renderizado frame a frame, detección de coordenadas del mouse y algoritmos flexibles para múltiples modos de juego.</li>
-                                <li>UX Fluida: Feedback visual inmediato, validaciones en tiempo real y uso de la API nativa Popover para notificaciones sin bloquear el DOM.</li>
-                                <li>UI Moderna: Carruseles interactivos programados manualmente, adaptabilidad responsive y loaders animados.</li>
+                                <li>Motor "4 en Línea": Lógica de renderizado frame a frame, detección de coordenadas
+                                    del mouse y algoritmos flexibles para múltiples modos de juego.</li>
+                                <li>UX Fluida: Feedback visual inmediato, validaciones en tiempo real y uso de la API
+                                    nativa Popover para notificaciones sin bloquear el DOM.</li>
+                                <li>UI Moderna: Carruseles interactivos programados manualmente, adaptabilidad
+                                    responsive y loaders animados.</li>
                             </ul>
                         </div>
                         <div class="modal-seccion">
                             <h3>📈 Resultados e impacto</h3>
                             <ul>
-                                <li>Demostración de dominio sólido en los fundamentos web y lógica compleja sin depender de librerías externas.</li>
+                                <li>Demostración de dominio sólido en los fundamentos web y lógica compleja sin depender
+                                    de librerías externas.</li>
                                 <li>Consistencia visual garantizada gracias al sistema de diseño atómico.</li>
                             </ul>
                         </div>
@@ -287,9 +297,13 @@
                         <div class="modal-seccion">
                             <h3>✔️ Funcionalidades destacadas</h3>
                             <ul>
-                                <li>Sistema de Parallax Híbrido: Elementos de fondo que responden a la velocidad del scroll y objetos que reaccionan en tiempo real a las coordenadas del mouse (clientX, clientY).</li>
-                                <li>Integración 3D Nativa: Uso de <model-viewer> para renderizar e interactuar con objetos 3D directamente en el navegador sin plugins.</li>
-                                <li>Optimizaciones UX: Custom loader basado en temporizadores y navegación reactiva que ajusta el header según el estado del scroll.</li>
+                                <li>Sistema de Parallax Híbrido: Elementos de fondo que responden a la velocidad del
+                                    scroll y objetos que reaccionan en tiempo real a las coordenadas del mouse (clientX,
+                                    clientY).</li>
+                                <li>Integración 3D Nativa: Uso de <model-viewer> para renderizar e interactuar con
+                                        objetos 3D directamente en el navegador sin plugins.</li>
+                                <li>Optimizaciones UX: Custom loader basado en temporizadores y navegación reactiva que
+                                    ajusta el header según el estado del scroll.</li>
                             </ul>
                         </div>
                         <div class="modal-seccion">
@@ -402,8 +416,8 @@
                     <span class="contacto-etiqueta">Email</span>
                 </a>
 
-                <a href="#" class="contacto-item" target="_blank" rel="noopener noreferrer">
-                    <div id="13" class="icono-caja">
+                <a href="https://www.linkedin.com/in/pabloaguirre" class="contacto-item" target="_blank" rel="noopener noreferrer">
+                    <div id="latido2" class="icono-caja">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5"
                             stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10"></circle>
@@ -414,8 +428,8 @@
                     <span class="contacto-etiqueta">LinkedIn</span>
                 </a>
 
-                <a href="#" class="contacto-item" target="_blank" rel="noopener noreferrer">
-                    <div id="14" class="icono-caja">
+                <a href="https://github.com/Pabloaguirre23" class="contacto-item" target="_blank" rel="noopener noreferrer">
+                    <div id="latido3" class="icono-caja">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5"
                             stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="4 17 10 11 4 5"></polyline>
@@ -433,8 +447,9 @@
     <p class="copyright">© 2026 Pablo Aguirre.</p>
 
     <div class="footer-links">
-        <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">GITHUB</a>
-        <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <a href="https://github.com/Pabloaguirre23" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a href="https://www.linkedin.com/in/pabloaguirre" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <img src="../assets/frog.svg" id="frog3" alt="Sapito 2" class="sapito-clickeable oculto">
     </div>
 </footer>
 

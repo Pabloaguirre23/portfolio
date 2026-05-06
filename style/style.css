@@ -530,21 +530,28 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-link-fucsia {
-  background-color: #6e6aff;
+  background-color: rgb(110, 106, 255);
   color: #ffffff;
 }
 
 .btn-ver-mas-lima {
-  background-color: #d9f95d; /* Verde Lima */
+  background-color: rgb(217, 249, 93); /* Verde Lima */
   color: #121212; /* Texto oscuro para contrastar */
+}
+.btn-ver-mas-lima:hover {
+  box-shadow: 0 10px 5px rgba(217, 249, 93, 0.1);
+}
+.btn-link-fucsia:hover {
+  box-shadow: 0 10px 5px rgba(110, 106, 255, 0.2);
 }
 
 .proyecto-botones a:hover {
-  opacity: 0.85;
+  opacity: o.9;
+  transform: translateY(-4px);
 }
 
 /* -- Columna Derecha: Imagen -- */
