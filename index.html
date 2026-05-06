@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Andrés Aguirre | Portfolio</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="porfolio.js" defer></script>
+</head>
+
+<body class="fondo-grilla">
+    <nav class="top-navbar">
+        <a href="#" class="nav-logo">PA</a>
+
+        <ul class="nav-links">
+            <li><a href="#inicio" class="active">Inicio</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+        </ul>
+
+        <a href="#contacto" class="btn-contacto">Contacto</a>
+    </nav>
+    <section id="inicio" class="seccion-hero">
+        <div class="hero-contenedor">
+
+            <div class="hero-imagen-wrapper">
+                <img src="../assets/perfil.jpg" alt="Pablo Andrés Aguirre" class="hero-imagen">
+            </div>
+
+            <div class="hero-texto">
+                <h1>Hola, soy <span class="texto-violeta">Pablo Andrés<br>Aguirre</span></h1>
+                <p>Software Developer & UI/UX (Pasante en Bínculo). Especialista en lógica backend, diseño de interfaces
+                    y automatización desde Tandil, Argentina.</p>
+
+                <div class="hero-botones">
+                    <a href="#contacto" class="btn-primario">Contactar</a>
+                    <a href="cv.pdf" download class="btn-secundario">Descargar CV</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="scroll-indicador">
+            <svg class="svg_scroll" viewBox="0 0 100 100" xmlns="http://w3.org">
+                <!-- Círculo exterior -->
+                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" />
+                <!-- Flecha hacia abajo -->
+                <path d="M30 45 L50 65 L70 45" stroke="currentColor" stroke-width="8" stroke-linecap="round"
+                    stroke-linejoin="round" fill="none" />
+            </svg>
+        </div>
+    </section>
+    <section id="experiencia" class="seccion-trayectoria">
+        <div class="trayectoria-contenedor">
+
+            <div class="trayectoria-encabezado">
+                <span class="subtitulo-violeta">TRAYECTORIA</span>
+                <h2>Evolución Técnica<br>y Profesional</h2>
+            </div>
+
+            <div class="linea-tiempo">
+
+                <div class="item-tiempo derecha">
+                    <div class="punto activo"></div>
+                    <div class="tarjeta-trayectoria">
+                        <span class="etiqueta-fecha">Actualidad</span>
+                        <h3>Pasante de Desarrollo - Binculo</h3>
+                        <p>Desarrollo de flujos de interfaz complejos y arquitectura de microservicios. Implementación
+                            de lógica técnica para optimizar la experiencia de usuario en plataformas digitales.</p>
+                    </div>
+                </div>
+
+                <div class="item-tiempo izquierda">
+                    <div class="punto"></div>
+                    <div class="tarjeta-trayectoria">
+                        <span class="etiqueta-fecha">En Progreso</span>
+                        <h3>TUDAI - UNICEN</h3>
+                        <p>Formación rigurosa en Programación Orientada a Objetos, Bases de Datos y Tecnologías Web
+                            Modernas dentro de la Universidad Nacional del Centro.</p>
+                    </div>
+                </div>
+
+                <div class="item-tiempo derecha">
+                    <div class="punto"></div>
+                    <div class="tarjeta-trayectoria">
+                        <span class="etiqueta-fecha">2013 - 2020</span>
+                        <h3>Técnico en Informática - Escuela Técnica N.º 2</h3>
+                        <p>Educación técnica integral con fuerte enfoque en fundamentos de programación, desarrollo de
+                            software base y comprensión de arquitectura de hardware. Esta etapa sentó las bases
+                            prácticas de mi pasión por la tecnología.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="proyectos" class="seccion-proyectos">
+        <div class="proyectos-contenedor">
+
+            <!-- Encabezado -->
+            <div class="proyectos-encabezado">
+                <span class="subtitulo-violeta">PORTFOLIO</span>
+                <h2>Proyectos y<br>Automatizaciones</h2>
+            </div>
+
+            <!-- TARJETA 1: MARVELCITO -->
+            <div class="tarjeta-proyecto">
+                <div class="proyecto-contenido">
+                    <span class="proyecto-categoria">Aplicación Web / Canvas API</span>
+                    <h3>Marvelcito Minijuegos</h3>
+
+                    <div class="proyecto-tags">
+                        <span class="tag tag-teal">HTML5</span>
+                        <span class="tag tag-orange">Vanilla JS</span>
+                        <span class="tag tag-blue">CSS3</span>
+                        <span class="tag tag-red">Figma</span>
+                        <span class="tag tag-green">Canvas API</span>
+                    </div>
+
+                    <p>Prototipo funcional de una plataforma de distribución de videojuegos. Simula la experiencia
+                        completa de usuario, desde la autenticación hasta una experiencia de juego inmersiva programada
+                        desde cero.</p>
+
+                    <ul class="proyecto-lista">
+                        <li>Motor de juego propio (Canvas & POO)</li>
+                        <li>Arquitectura sin frameworks (Vanilla ES6)</li>
+                    </ul>
+
+                    <div class="proyecto-botones">
+                        <a href="#" class="btn-link-fucsia">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                            Link
+                        </a>
+                        <!-- BOTÓN PARA ABRIR MODAL 1 -->
+                        <a id="btn-abrir-marvelcito" class="btn-ver-mas-lima" style="cursor: pointer;">Ver más</a>
+                    </div>
+                </div>
+
+                <div class="aside">
+                    <div class="proyecto-imagen-wrapper">
+                        <img src="../assets/marvelcito.png" alt="Preview Marvelcito Minijuegos" class="proyecto-imagen">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="proyectos-contenedor">
+
+            <!-- TARJETA 2: NUMBERBLOCKS -->
+            <div class="tarjeta-proyecto">
+                <div class="proyecto-contenido">
+                    <span class="proyecto-categoria">Landing Page Inmersiva</span>
+                    <h3>NumberBlocks World</h3>
+
+                    <div class="proyecto-tags">
+                        <span class="tag tag-green">NODE.JS</span>
+                        <span class="tag tag-orange">JavaScript</span>
+                        <span class="tag tag-teal">CSS Animations</span>
+                        <span class="tag tag-green">&lt;model-viewer&gt;</span>
+                        <span class="tag tag-red">Figma</span>
+                    </div>
+
+                    <p>Experiencia web interactiva diseñada para retener la atención mediante narrativa visual. Un
+                        entorno "vivo" donde el DOM reacciona dinámicamente al scroll y al movimiento del mouse.</p>
+
+                    <ul class="proyecto-lista">
+                        <li>Animaciones Scroll-Driven nativas</li>
+                        <li>Sistema de Parallax multicapa (Mouse & Scroll)</li>
+                    </ul>
+
+                    <div class="proyecto-botones">
+                        <a href="#" class="btn-link-fucsia">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                            Link
+                        </a>
+                        <!-- BOTÓN PARA ABRIR MODAL 2 -->
+                        <a id="btn-abrir-numberblocks" class="btn-ver-mas-lima" style="cursor: pointer;">Ver más</a>
+                    </div>
+                </div>
+                <div class="aside">
+                    <div class="proyecto-imagen-wrapper">
+                        <img src="../assets/numberblocks_miniatura.png" alt="Preview NumberBlocks World"
+                            class="proyecto-imagen">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- ZONA DE MODALES (OCULTOS POR DEFECTO)      -->
+        <!-- ========================================== -->
+
+        <!-- MODAL 1: MARVELCITO -->
+        <div id="modal-marvelcito" class="modal-overlay">
+            <div class="proyecto-modal">
+                <button id="btn-cerrar-marvelcito" class="btn-cerrar">✕</button>
+
+                <div class="modal-imagen-wrapper">
+                    <img src="../assets/Frame3.png" alt="Preview de Marvelcito" class="modal-imagen">
+                </div>
+
+                <h2 class="modal-titulo">Marvelcito Minijuegos</h2>
+
+                <div class="modal-grid">
+                    <div class="modal-col-izq">
+                        <div class="modal-seccion">
+                            <h3>👤 Rol y responsabilidades</h3>
+                            <ul>
+                                <li>Diseño UI/UX completo basado en la metodología Atomic Design.</li>
+                                <li>Desarrollo integral de la lógica de programación y renderizado de la interfaz.</li>
+                                <li>Creación desde cero de un motor de juego utilizando HTML5 Canvas.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-seccion">
+                            <h3>✔️ Funcionalidades destacadas</h3>
+                            <ul>
+                                <li>Motor "4 en Línea": Lógica de renderizado frame a frame, detección de coordenadas del mouse y algoritmos flexibles para múltiples modos de juego.</li>
+                                <li>UX Fluida: Feedback visual inmediato, validaciones en tiempo real y uso de la API nativa Popover para notificaciones sin bloquear el DOM.</li>
+                                <li>UI Moderna: Carruseles interactivos programados manualmente, adaptabilidad responsive y loaders animados.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-seccion">
+                            <h3>📈 Resultados e impacto</h3>
+                            <ul>
+                                <li>Demostración de dominio sólido en los fundamentos web y lógica compleja sin depender de librerías externas.</li>
+                                <li>Consistencia visual garantizada gracias al sistema de diseño atómico.</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn-link-fucsia">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                            Link
+                        </a>
+                    </div>
+                    <div class="modal-col-der">
+                        <div class="modal-seccion">
+                            <h3 class="titulo-tech">⚙️ Tecnologías</h3>
+                            <div class="tech-badges">
+                                <span class="badge badge-html">HTML5</span>
+                                <span class="badge badge-js">Vanilla ES6</span>
+                                <span class="badge badge-css">CSS3</span>
+                                <span class="badge badge-figma">Figma</span>
+                                <span class="badge badge-canvas">Canvas API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL 2: NUMBERBLOCKS -->
+        <div id="modal-numberblocks" class="modal-overlay">
+            <div class="proyecto-modal">
+                <button id="btn-cerrar-numberblocks" class="btn-cerrar">✕</button>
+
+                <div class="modal-imagen-wrapper">
+                    <img src="../assets/Frame2.png" alt="Preview de NumberBlocks" class="modal-imagen">
+                </div>
+
+                <h2 class="modal-titulo">NumberBlocks World</h2>
+
+                <div class="modal-grid">
+                    <div class="modal-col-izq">
+                        <div class="modal-seccion">
+                            <h3>👤 Rol y responsabilidades</h3>
+                            <ul>
+                                <li>Prototipado y diseño visual interactivo enfocado en jerarquía y teoría del color.
+                                </li>
+                                <li>Desarrollo frontend avanzado orientado a micro-interacciones y rendimiento.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-seccion">
+                            <h3>✔️ Funcionalidades destacadas</h3>
+                            <ul>
+                                <li>Sistema de Parallax Híbrido: Elementos de fondo que responden a la velocidad del scroll y objetos que reaccionan en tiempo real a las coordenadas del mouse (clientX, clientY).</li>
+                                <li>Integración 3D Nativa: Uso de <model-viewer> para renderizar e interactuar con objetos 3D directamente en el navegador sin plugins.</li>
+                                <li>Optimizaciones UX: Custom loader basado en temporizadores y navegación reactiva que ajusta el header según el estado del scroll.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-seccion">
+                            <h3>📈 Resultados e impacto</h3>
+                            <ul>
+                                <li>Creación de una experiencia de usuario (UX) rica y de alto impacto visual.</li>
+                                <li>Demostración de capacidad para maquetar animaciones de rendimiento nativo.</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn-link-fucsia">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                            Link
+                        </a>
+                    </div>
+                    <div class="modal-col-der">
+                        <div class="modal-seccion">
+                            <h3 class="titulo-tech">⚙️ Tecnologías</h3>
+                            <div class="tech-badges">
+                                <span class="badge badge-html">HTML5</span>
+                                <span class="badge badge-js">JavaScript</span>
+                                <span class="badge badge-css">CSS3 Animations</span>
+                                <span class="badge badge-figma">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="sobre-mi" class="seccion-sobre-mi">
+        <div class="sobre-mi-tarjeta">
+
+            <div class="sobre-mi-contenido">
+
+                <div class="sobre-mi-texto">
+                    <span class="subtitulo-violeta">BIOGRAFÍA</span>
+                    <h2>Sobre mí</h2>
+
+                    <p>Desarrollador de Software y Diseñador UI/UX con enfoque en crear experiencias digitales
+                        completas. Trabajo en todo el ciclo del producto — <span class="texto-violeta">desde interfaces
+                            intuitivas y cuidadas en Figma</span> hasta <span class="texto-violeta">arquitecturas
+                            backend robustas</span> — con un fuerte foco en la usabilidad y la lógica técnica.</p>
+
+                    <p>Actualmente me desempeño como pasante en Binculo y curso la carrera TUDAI. Me gusta resolver
+                        problemas reales cerrando la brecha entre el diseño y el código. Hoy en día estoy profundizando
+                        de lleno en el mundo de las <span class="texto-violeta">automatizaciones</span>, creando flujos
+                        de trabajo inteligentes con <span class="texto-violeta">n8n</span> para optimizar procesos y
+                        conectar sistemas de manera eficiente.</p>
+
+                    <p>Fuera de la pantalla, disfruto de hacer deporte, caminar por las sierras, analizar el diseño de
+                        productos cotidianos y aprender nuevas herramientas.</p>
+                </div>
+
+                <div class="sobre-mi-imagen-wrapper">
+                    <img src="../assets/perfil.jpg" alt="Pablo Andrés Aguirre" class="sobre-mi-imagen">
+                </div>
+
+            </div>
+
+            <hr class="sobre-mi-separador">
+
+            <div class="sobre-mi-skills">
+                <div class="skill-tag">
+                    <span class="skill-icono">&lt;/&gt;</span>
+                    React
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icono">&gt;_</span>
+                    Node.js
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icono">🎨</span> Figma
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icono">🗄️</span> SQL
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icono">⚙️</span>
+                    n8n
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icono">TS</span>
+                    TypeScript
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="contacto" class="seccion-contacto">
+        <div class="contacto-tarjeta">
+
+            <span class="subtitulo-violeta">Hablemos</span>
+            <h2>¿Tienes un proyecto en mente?</h2>
+
+            <div class="contacto-enlaces">
+
+                <a href="mailto:pabloaaguirrejob@gmail.com" class="contacto-item">
+                    <div id="latido1" class="icono-caja">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </div>
+                    <span class="contacto-etiqueta">Email</span>
+                </a>
+
+                <a href="#" class="contacto-item" target="_blank" rel="noopener noreferrer">
+                    <div id="13" class="icono-caja">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 8v8"></path>
+                            <path d="M8 12a4 4 0 1 0 8 0 4 4 0 1 0-8 0"></path>
+                        </svg>
+                    </div>
+                    <span class="contacto-etiqueta">LinkedIn</span>
+                </a>
+
+                <a href="#" class="contacto-item" target="_blank" rel="noopener noreferrer">
+                    <div id="14" class="icono-caja">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                    </div>
+                    <span class="contacto-etiqueta">GitHub</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+</body>
+<footer class="footer-completo">
+    <p class="copyright">© 2026 Pablo Aguirre.</p>
+
+    <div class="footer-links">
+        <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+    </div>
+</footer>
+
+</html>
