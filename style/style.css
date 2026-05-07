@@ -5,6 +5,25 @@
   --violet-primary: #a87ffb; 
   --text-light: #ffffff;
 }
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 5%;
+}
+@keyframes entrar-seccion {
+    from {
+        opacity: 0.5;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Le aplicamos la animación SOLO a la sección que fue clickeada desde el Nav */
+section:target {
+    animation: entrar-seccion 0.8s ease-out forwards;
+}
 
 .fondo-grilla {
 
