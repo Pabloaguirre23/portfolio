@@ -91,18 +91,19 @@ const frog1 = document.getElementById('frog1');
 const frog2 = document.getElementById('frog2');
 const frog3 = document.getElementById('frog3');
 
-frog1.addEventListener('click', () => {
-    frog1.classList.add('oculto');
-    frog2.classList.remove('oculto');
-});
+function atraparSapito(sapitoActual, sapitoSiguiente, claseSalto) {
+    sapitoActual.classList.add(claseSalto);
+    
+    setTimeout(() => {
+        sapitoActual.classList.add('oculto');
+        sapitoActual.classList.remove(claseSalto);
+        
+        sapitoSiguiente.classList.remove('oculto');
+    }, 400); 
+}
 
-frog2.addEventListener('click', () => {
-    frog2.classList.add('oculto');
-    frog3.classList.remove('oculto');
-});
 
-frog3.addEventListener('click', () => {
-    frog3.classList.add('oculto');
-    frog1.classList.remove('oculto');
-});
- 
+frog1.addEventListener('click', () => atraparSapito(frog1, frog2, 'sapito-saltando-der'));
+
+frog2.addEventListener('click', () => atraparSapito(frog2, frog3, 'sapito-saltando-izq'));
+frog3.addEventListener('click', () => atraparSapito(frog3, frog1, 'sapito-saltando-izq'));
