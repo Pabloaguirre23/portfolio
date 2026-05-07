@@ -1139,18 +1139,18 @@ body {
       transform: translateX(-40%); 
     }
 }
-/* Le damos forma de "manito" al cursor para indicar que es interactivo */
+
 .sapito-clickeable {
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
-/* Un pequeño efecto al pasar el mouse para invitar al clic */
+
 .sapito-clickeable:hover {
     transform: scale(1.1); 
 }
 
-/* La clase mágica que desaparece elementos por completo */
+
 .oculto {
     display: none;
 }
@@ -1160,4 +1160,23 @@ body {
 }
 .frog-logo-container{
   width: 33px;
+}
+@keyframes agitar-sapito {
+    0%, 10%, 100% { transform: rotate(0deg) scale(1); }
+    2% { transform: rotate(-3deg) scale(1.05); } 
+    4% { transform: rotate(3deg) scale(1.05); } 
+    6% { transform: rotate(-3deg) scale(1.05); }
+    8% { transform: rotate(3deg) scale(1.05); }  
+}
+
+.sapito-clickeable {
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    animation: agitar-sapito 5s infinite;
+}
+
+.sapito-clickeable:hover {
+    animation-play-state: paused;
+    transform: scale(1.15) rotate(0deg); 
+    filter: drop-shadow(0 0 8px rgba(28, 143, 53, 0.7)); 
 }
