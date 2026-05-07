@@ -87,25 +87,22 @@ window.addEventListener('keydown', (evento) => {
     }
 });
 
-// 1. Seleccionamos a los TRES sapitos
 const frog1 = document.getElementById('frog1');
 const frog2 = document.getElementById('frog2');
 const frog3 = document.getElementById('frog3');
 
-// 2. Secuencia del Sapito 1 (Hace aparecer al 2)
 frog1.addEventListener('click', () => {
     frog1.classList.add('oculto');
     frog2.classList.remove('oculto');
 });
 
-// 3. Secuencia del Sapito 2 (Hace aparecer al 3)
 frog2.addEventListener('click', () => {
     frog2.classList.add('oculto');
     frog3.classList.remove('oculto');
 });
 
-// 4. Secuencia del Sapito 3 (Hace aparecer al 1 para reiniciar el juego)
 frog3.addEventListener('click', () => {
     frog3.classList.add('oculto');
     frog1.classList.remove('oculto');
 });
+ 
