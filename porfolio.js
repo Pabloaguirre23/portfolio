@@ -41,6 +41,25 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// --- LÓGICA MENÚ HAMBURGUESA ---
+const menuHamburguesa = document.getElementById('menu-hamburguesa');
+const navLinksContainer = document.getElementById('nav-links');
+
+if (menuHamburguesa && navLinksContainer) {
+    menuHamburguesa.addEventListener('click', () => {
+        menuHamburguesa.classList.toggle('activo');
+        navLinksContainer.classList.toggle('activo');
+    });
+
+    // Cerrar menú al hacer click en un enlace
+    navLinks.forEach(enlace => {
+        enlace.addEventListener('click', () => {
+            menuHamburguesa.classList.remove('activo');
+            navLinksContainer.classList.remove('activo');
+        });
+    });
+}
+
 // --- LÓGICA PARA MODALES DE PROYECTOS ---
 
 // 1. Seleccionamos los elementos de Marvelcito
