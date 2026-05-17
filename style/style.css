@@ -911,6 +911,22 @@ body {
         text-align: center;
     }
 }
+.hero-texto h1::after {
+    content: '|'; 
+    color: #ffffff; 
+    animation: titilar 0.8s infinite;
+}
+
+@keyframes titilar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+.hero-texto h1.sin-cursor::after {
+    content: '';
+    animation: none;
+    display: none;
+}
+
 
 
 

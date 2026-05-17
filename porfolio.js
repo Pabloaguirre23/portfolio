@@ -107,3 +107,43 @@ frog1.addEventListener('click', () => atraparSapito(frog1, frog2, 'sapito-saltan
 
 frog2.addEventListener('click', () => atraparSapito(frog2, frog3, 'sapito-saltando-izq'));
 frog3.addEventListener('click', () => atraparSapito(frog3, frog1, 'sapito-saltando-izq'));
+document.addEventListener("DOMContentLoaded", () => {
+    const titulo = document.querySelector('.hero-texto h1');
+    titulo.innerHTML = '';
+
+    const texto1 = "Hola, soy ";
+    const texto2 = "Pablo Andrés";
+    const texto3 = "Aguirre";
+    
+    const velocidad = 65; 
+
+    async function maquinaDeEscribir() {
+        for (let i = 0; i < texto1.length; i++) {
+            titulo.innerHTML += texto1.charAt(i);
+            await new Promise(r => setTimeout(r, velocidad));
+        }
+
+        const span = document.createElement('span');
+        span.className = 'texto-violeta';
+        titulo.appendChild(span);
+
+
+        for (let i = 0; i < texto2.length; i++) {
+            span.innerHTML += texto2.charAt(i);
+            await new Promise(r => setTimeout(r, velocidad));
+        }
+
+        span.innerHTML += '<br>';
+
+        for (let i = 0; i < texto3.length; i++) {
+            span.innerHTML += texto3.charAt(i);
+            await new Promise(r => setTimeout(r, velocidad));
+        }
+
+        setTimeout(() => {
+            titulo.classList.add('sin-cursor');
+        }, 1800);
+    }
+
+    setTimeout(maquinaDeEscribir, 500);
+});
