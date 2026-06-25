@@ -975,6 +975,12 @@ body {
     width: 100%;
     max-width: 79%;
   }
+  .aside{
+    height: 210px;
+  }
+  .proyecto-imagen{
+    max-width: 300px;
+  }
 }
 
 body {
