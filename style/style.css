@@ -538,7 +538,7 @@ body {
 
 .aside{
     width: 528px;
-    height: 523px;
+    height: 210px;
     align-items: center;
     display: flex;
 }
@@ -672,7 +672,7 @@ body {
 
 .proyecto-imagen {
   width: 100%;
-  max-width: 450px;
+  max-width: 300px;
   border-radius: 12px;
   /* Una pequeña sombra para darle profundidad a la captura */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
