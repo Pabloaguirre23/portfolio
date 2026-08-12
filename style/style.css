@@ -50,13 +50,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-nav);
+  background-color: rgba(18, 18, 18, 0.55);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
   padding: 12px 24px;
-  border-radius: 16px; 
+  border-radius: 16px;
   max-width: 1000px;
-  margin: 0 auto; 
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0px 0px 20px rgba(139, 92, 246, 0.29);
-  
+
   position: sticky;
   top: 25px;
   z-index: 999;
@@ -212,10 +215,16 @@ body {
 }
 
 .hero-imagen-wrapper {
-  background-color: #1a1a1e; 
+  background-color: #1a1a1e;
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0px 0px 40px rgba(139, 92, 246, 0.3);
+  transition: transform 0.35s ease-out, box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.hero-imagen-wrapper:hover {
+  box-shadow: 0px 0px 45px rgba(139, 92, 246, 0.35);
 }
 
 .hero-imagen {
@@ -410,6 +419,28 @@ body {
   margin-left: -1px;
 }
 
+/* En navegadores compatibles (Chrome/Edge), la línea se "dibuja" a medida
+   que se scrollea la sección, sin depender de JS. Si no hay soporte, la
+   línea queda estática como antes (fallback seguro). */
+@supports (animation-timeline: view()) {
+  .linea-tiempo {
+    view-timeline-name: --linea-vista;
+    view-timeline-axis: block;
+  }
+
+  .linea-tiempo::after {
+    transform-origin: top;
+    animation: dibujar-linea linear both;
+    animation-timeline: --linea-vista;
+    animation-range: entry 10% cover 70%;
+  }
+
+  @keyframes dibujar-linea {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+  }
+}
+
 .item-tiempo {
   padding: 10px 40px;
   position: relative;
@@ -541,6 +572,7 @@ body {
     height: 523px;
     align-items: center;
     display: flex;
+    perspective: 1200px;
 }
 
 .proyecto-categoria {
@@ -658,7 +690,7 @@ body {
 }
 
 .proyecto-botones a:hover {
-  opacity: o.9;
+  opacity: 0.9;
   transform: translateY(-4px);
 }
 
@@ -668,6 +700,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proyecto-imagen-wrapper,
+  .hero-imagen-wrapper,
+  .sobre-mi-imagen-wrapper {
+    transition: none;
+  }
 }
 
 .proyecto-imagen {
@@ -749,6 +792,12 @@ body {
   padding: 16px;
   border-radius: 12px;
   flex-shrink: 0; /* Evita que la foto se achique */
+  transition: transform 0.35s ease-out, box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.sobre-mi-imagen-wrapper:hover {
+  box-shadow: 0px 0px 32px rgba(139, 92, 246, 0.22);
 }
 
 .sobre-mi-imagen {
@@ -757,6 +806,61 @@ body {
   border-radius: 8px;
   display: block;
   object-fit: cover;
+}
+
+/* -- Bento grid de áreas destacadas -- */
+.bento-skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 60px 48px;
+}
+
+.bento-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 28px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--violet-primary, #a87ffb);
+  box-shadow: 0 12px 30px rgba(168, 127, 251, 0.15);
+}
+
+.bento-icono {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: rgba(168, 127, 251, 0.12);
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.bento-card h3 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.bento-card p {
+  color: #a1a1aa;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .bento-skills {
+    grid-template-columns: 1fr;
+    padding: 0 40px 40px;
+  }
 }
 
 /* -- Línea separadora -- */
@@ -1338,5 +1442,35 @@ body {
 }
 
 .sapito-saltando-izq {
-    animation: salto-izquierda 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards !important; 
+    animation: salto-izquierda 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
+}
+
+/* --- ANIMACIÓN DE ENTRADA AL HACER SCROLL --- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* --- ESTADOS DE FOCO ACCESIBLES (navegación por teclado) --- */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--violet-primary, #a87ffb);
+    outline-offset: 3px;
+    border-radius: 4px;
 }

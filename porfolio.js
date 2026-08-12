@@ -1,3 +1,55 @@
+// --- TILT 3D EN IMÁGENES ---
+const tiltHabilitado = window.matchMedia('(pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// zonaTilt: elemento cuyo área dispara el efecto (área de detección del mouse)
+// objetivo: elemento que efectivamente rota
+// incluirPerspectiva: agrega perspective() al propio transform cuando zonaTilt y objetivo son el mismo elemento
+function habilitarTilt(zonaTilt, objetivo, { gradosMax = 10, incluirPerspectiva = false } = {}) {
+    if (!zonaTilt || !objetivo) return;
+
+    const base = incluirPerspectiva ? 'perspective(900px) ' : '';
+
+    zonaTilt.addEventListener('mousemove', (evento) => {
+        const rect = zonaTilt.getBoundingClientRect();
+        const x = (evento.clientX - rect.left) / rect.width - 0.5;
+        const y = (evento.clientY - rect.top) / rect.height - 0.5;
+        objetivo.style.transform = `${base}rotateY(${x * gradosMax * 2}deg) rotateX(${-y * gradosMax * 2}deg)`;
+    });
+
+    zonaTilt.addEventListener('mouseleave', () => {
+        objetivo.style.transform = `${base}rotateY(0deg) rotateX(0deg)`;
+    });
+}
+
+if (tiltHabilitado) {
+    document.querySelectorAll('.tarjeta-proyecto').forEach(tarjeta => {
+        habilitarTilt(tarjeta.querySelector('.aside'), tarjeta.querySelector('.proyecto-imagen-wrapper'), { gradosMax: 10 });
+    });
+
+    const heroImagenWrapper = document.querySelector('.hero-imagen-wrapper');
+    habilitarTilt(heroImagenWrapper, heroImagenWrapper, { gradosMax: 3, incluirPerspectiva: true });
+
+    const sobreMiImagenWrapper = document.querySelector('.sobre-mi-imagen-wrapper');
+    habilitarTilt(sobreMiImagenWrapper, sobreMiImagenWrapper, { gradosMax: 3, incluirPerspectiva: true });
+}
+
+// --- ANIMACIÓN DE ENTRADA AL HACER SCROLL ---
+const elementosRevelables = document.querySelectorAll('.reveal');
+
+if (elementosRevelables.length) {
+    const observadorScroll = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+                observadorScroll.unobserve(entrada.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
+
+    elementosRevelables.forEach(elemento => observadorScroll.observe(elemento));
+}
+
 const elemento = document.querySelector('.scroll-indicador');
 
 window.addEventListener('scroll', () => {

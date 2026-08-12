@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pablo Andrés Aguirre | Portfolio</title>
     <link rel="icon" type="image/ico" href="../assets/perfil.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style/style.css">
     <script src="porfolio.js" defer></script>
 </head>
@@ -64,14 +67,14 @@
     <section id="experiencia" class="seccion-trayectoria">
         <div class="trayectoria-contenedor">
 
-            <div class="trayectoria-encabezado">
+            <div class="trayectoria-encabezado reveal">
                 <span class="subtitulo-violeta">TRAYECTORIA</span>
                 <h2>Evolución Técnica<br>y Profesional</h2>
             </div>
 
             <div class="linea-tiempo">
 
-                    <div class="item-tiempo derecha">
+                    <div class="item-tiempo derecha reveal">
                         <div class="punto activo"></div>
                         <div class="tarjeta-trayectoria">
                         <span class="etiqueta-fecha">En Progreso</span>
@@ -81,7 +84,7 @@
                     </div>
                 </div>
 
-                <div class="item-tiempo izquierda">
+                <div class="item-tiempo izquierda reveal">
                     <div class="punto"></div>
                     <div class="tarjeta-trayectoria">
                         <span class="etiqueta-fecha">Enero 2026 - Junio 2026</span>
@@ -92,7 +95,7 @@
                 </div>
 
 
-                <div class="item-tiempo derecha">
+                <div class="item-tiempo derecha reveal">
                     <div class="punto"></div>
                     <div class="tarjeta-trayectoria">
                         <span class="etiqueta-fecha">2013 - 2020</span>
@@ -110,13 +113,13 @@
         <div class="proyectos-contenedor">
 
             <!-- Encabezado -->
-            <div class="proyectos-encabezado">
+            <div class="proyectos-encabezado reveal">
                 <span class="subtitulo-violeta">PORTFOLIO</span>
                 <h2>Proyectos y<br>Automatizaciones</h2>
             </div>
 
             <!-- TARJETA 1: MARVELCITO -->
-            <div class="tarjeta-proyecto">
+            <div class="tarjeta-proyecto reveal">
                 <div class="proyecto-contenido">
                     <span class="proyecto-categoria">Aplicación Web / Canvas API</span>
                     <h3>Marvelcito Minijuegos</h3>
@@ -168,7 +171,7 @@
                 </div>
             </div>
             <!-- TARJETA 2: NUMBERBLOCKS -->
-            <div class="tarjeta-proyecto">
+            <div class="tarjeta-proyecto reveal">
                 <div class="proyecto-contenido">
                     <span class="proyecto-categoria">Landing Page Inmersiva</span>
                     <h3>NumberBlocks World</h3>
@@ -347,7 +350,7 @@
 
     </section>
     <section id="sobre-mi" class="seccion-sobre-mi">
-        <div class="sobre-mi-tarjeta">
+        <div class="sobre-mi-tarjeta reveal">
 
             <div class="sobre-mi-contenido">
 
@@ -360,7 +363,8 @@
                             intuitivas y cuidadas en Figma</span> hasta <span class="texto-violeta">arquitecturas
                             backend robustas</span> — con un fuerte foco en la usabilidad y la lógica técnica.</p>
 
-                    <p>Actualmente me desempeño como pasante en Binculo y curso la carrera TUDAI. Me gusta resolver
+                    <p>Con la experiencia práctica adquirida durante mi reciente pasantía en Binculo, actualmente me 
+                        encuentro cursando la carrera TUDAI y abierto a nuevos desafíos. Me apasiona resolver
                         problemas reales cerrando la brecha entre el diseño y el código. Hoy en día estoy profundizando
                         de lleno en el mundo de las <span class="texto-violeta">automatizaciones</span>, creando flujos
                         de trabajo inteligentes con <span class="texto-violeta">n8n</span> para optimizar procesos y
@@ -374,6 +378,24 @@
                     <img src="../assets/perfil.jpg" alt="Pablo Andrés Aguirre" class="sobre-mi-imagen">
                 </div>
 
+            </div>
+
+            <div class="bento-skills reveal">
+                <div class="bento-card">
+                    <div class="bento-icono">🎨</div>
+                    <h3>Frontend & Diseño</h3>
+                    <p>Interfaces cuidadas con JavaScript, HTML/CSS y Figma, con foco en usabilidad y UX/UI.</p>
+                </div>
+                <div class="bento-card">
+                    <div class="bento-icono">🗄️</div>
+                    <h3>Backend & Datos</h3>
+                    <p>Lógica robusta con Java y SQL para sostener el producto de punta a punta.</p>
+                </div>
+                <div class="bento-card">
+                    <div class="bento-icono">⚙️</div>
+                    <h3>Automatización</h3>
+                    <p>Flujos de trabajo inteligentes con n8n que conectan sistemas y optimizan procesos.</p>
+                </div>
             </div>
 
             <hr class="sobre-mi-separador">
@@ -402,7 +424,7 @@
         </div>
     </section>
     <section id="contacto" class="seccion-contacto">
-        <div class="contacto-tarjeta">
+        <div class="contacto-tarjeta reveal">
 
             <span class="subtitulo-violeta">Hablemos</span>
             <h2>¿Tienes un proyecto en mente?</h2>
