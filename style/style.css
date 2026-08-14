@@ -460,7 +460,7 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 32px;
-    padding: 0 20px;
+    padding: 110px 20px;
   }
 
   .hero-texto h1 {
