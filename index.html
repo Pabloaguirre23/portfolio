@@ -27,7 +27,14 @@
         </ul>
 
         <div class="nav-derecha">
-            <a href="#contacto" class="btn-contacto">Contacto</a>
+            <a href="#contacto" class="btn-contacto">
+                Contacto
+                <span class="circulo-flecha">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M13 6l6 6-6 6"></path>
+                    </svg>
+                </span>
+            </a>
             <button class="menu-hamburguesa" id="menu-hamburguesa" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
@@ -43,11 +50,29 @@
             </div>
 
             <div class="hero-texto">
+                <div class="badge-estado">
+                    <span class="punto-pulso"></span>
+                    Abierto a nuevas oportunidades
+                </div>
+
                 <h1>Hola, soy <span class="texto-violeta">Pablo Andrés<br>Aguirre</span></h1>
                 <p>Web Developer & Automation. Estudiante de la TUDAI conectando interfaces dinámicas con arquitecturas automatizadas y escalables desde Tandil, Argentina.</p>
 
+                <div class="pildoras-credenciales">
+                    <span class="pildora-credencial">🎓 Cursando TUDAI - UNICEN</span>
+                    <span class="pildora-credencial">💼 Pasante en Binculo</span>
+                    <span class="pildora-credencial">⚙️ Automatización con n8n</span>
+                </div>
+
                 <div class="hero-botones">
-                    <a href="#contacto" class="btn-primario">Contactar</a>
+                    <a href="#contacto" class="btn-primario">
+                        Contactar
+                        <span class="circulo-flecha">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M13 6l6 6-6 6"></path>
+                            </svg>
+                        </span>
+                    </a>
                     <a href="../assets/curriculumIT.pdf" download class="btn-secundario">Descargar CV</a>
                 </div>
             </div>
@@ -69,7 +94,7 @@
 
             <div class="trayectoria-encabezado reveal">
                 <span class="subtitulo-violeta">TRAYECTORIA</span>
-                <h2>Evolución Técnica<br>y Profesional</h2>
+                <h2>Evolución Técnica<br>y <span class="texto-violeta">Profesional</span></h2>
             </div>
 
             <div class="linea-tiempo">
@@ -115,12 +140,13 @@
             <!-- Encabezado -->
             <div class="proyectos-encabezado reveal">
                 <span class="subtitulo-violeta">PORTFOLIO</span>
-                <h2>Proyectos y<br>Automatizaciones</h2>
+                <h2>Proyectos y<br><span class="texto-violeta">Automatizaciones</span></h2>
             </div>
 
             <!-- TARJETA 1: MARVELCITO -->
             <div class="tarjeta-proyecto reveal">
                 <div class="proyecto-contenido">
+                    <span class="proyecto-numero">01</span>
                     <span class="proyecto-categoria">Aplicación Web / Canvas API</span>
                     <h3>Marvelcito Minijuegos</h3>
 
@@ -173,6 +199,7 @@
             <!-- TARJETA 2: NUMBERBLOCKS -->
             <div class="tarjeta-proyecto reveal">
                 <div class="proyecto-contenido">
+                    <span class="proyecto-numero">02</span>
                     <span class="proyecto-categoria">Landing Page Inmersiva</span>
                     <h3>NumberBlocks World</h3>
 
@@ -380,18 +407,18 @@
 
             </div>
 
-            <div class="bento-skills reveal">
-                <div class="bento-card">
+            <div class="bento-skills">
+                <div class="bento-card reveal">
                     <div class="bento-icono">🎨</div>
                     <h3>Frontend & Diseño</h3>
                     <p>Interfaces cuidadas con JavaScript, HTML/CSS y Figma, con foco en usabilidad y UX/UI.</p>
                 </div>
-                <div class="bento-card">
+                <div class="bento-card reveal">
                     <div class="bento-icono">🗄️</div>
                     <h3>Backend & Datos</h3>
                     <p>Lógica robusta con Java y SQL para sostener el producto de punta a punta.</p>
                 </div>
-                <div class="bento-card">
+                <div class="bento-card reveal">
                     <div class="bento-icono">⚙️</div>
                     <h3>Automatización</h3>
                     <p>Flujos de trabajo inteligentes con n8n que conectan sistemas y optimizan procesos.</p>
@@ -427,7 +454,7 @@
         <div class="contacto-tarjeta reveal">
 
             <span class="subtitulo-violeta">Hablemos</span>
-            <h2>¿Tienes un proyecto en mente?</h2>
+            <h2>¿Tienes un <span class="texto-violeta">proyecto</span> en mente?</h2>
 
             <div class="contacto-enlaces">
 

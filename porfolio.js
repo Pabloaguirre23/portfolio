@@ -53,13 +53,20 @@ if (elementosRevelables.length) {
 const elemento = document.querySelector('.scroll-indicador');
 
 window.addEventListener('scroll', () => {
-  
+
   if (window.scrollY > 200) {
     elemento.classList.add('oculto');
   } else {
-    
+
     elemento.classList.remove('oculto');
   }
+});
+
+// --- NAVBAR CONDENSADA AL HACER SCROLL ---
+const topNavbar = document.querySelector('.top-navbar');
+
+window.addEventListener('scroll', () => {
+  topNavbar.classList.toggle('scrolled', window.scrollY > 30);
 });
 
 // 1. Seleccionamos las secciones de tu página
