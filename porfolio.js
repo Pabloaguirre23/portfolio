@@ -121,12 +121,17 @@ if (menuHamburguesa && navLinksContainer) {
 
 // --- LÓGICA PARA MODALES DE PROYECTOS ---
 
-// 1. Seleccionamos los elementos de Marvelcito
+// 1. Seleccionamos los elementos de Qubo
+const modalQubo = document.getElementById('modal-Qubo');
+const btnAbrirQubo = document.getElementById('btn-abrir-Qubo');
+const btnCerrarQubo = document.getElementById('btn-cerrar-Qubo');
+
+// 2. Seleccionamos los elementos de Marvelcito
 const modalMarvelcito = document.getElementById('modal-marvelcito');
 const btnAbrirMarvelcito = document.getElementById('btn-abrir-marvelcito');
 const btnCerrarMarvelcito = document.getElementById('btn-cerrar-marvelcito');
 
-// 2. Seleccionamos los elementos de NumberBlocks
+// 3. Seleccionamos los elementos de NumberBlocks
 const modalNumberblocks = document.getElementById('modal-numberblocks');
 const btnAbrirNumberblocks = document.getElementById('btn-abrir-numberblocks');
 const btnCerrarNumberblocks = document.getElementById('btn-cerrar-numberblocks');
@@ -143,6 +148,10 @@ function cerrarModal(modal) {
     document.body.style.overflow = 'auto';
 }
 
+// Eventos Qubo
+btnAbrirQubo.addEventListener('click', () => abrirModal(modalQubo));
+btnCerrarQubo.addEventListener('click', () => cerrarModal(modalQubo));
+
 // Eventos Marvelcito
 btnAbrirMarvelcito.addEventListener('click', () => abrirModal(modalMarvelcito));
 btnCerrarMarvelcito.addEventListener('click', () => cerrarModal(modalMarvelcito));
@@ -153,6 +162,7 @@ btnCerrarNumberblocks.addEventListener('click', () => cerrarModal(modalNumberblo
 
 // Cerrar haciendo clic afuera (aplica para ambos)
 window.addEventListener('click', (evento) => {
+    if(evento.target === modalQubo) cerrarModal(modalQubo);
     if (evento.target === modalMarvelcito) cerrarModal(modalMarvelcito);
     if (evento.target === modalNumberblocks) cerrarModal(modalNumberblocks);
 });
@@ -160,6 +170,7 @@ window.addEventListener('click', (evento) => {
 // Cerrar con Escape (aplica para ambos)
 window.addEventListener('keydown', (evento) => {
     if (evento.key === 'Escape') {
+        if (modalQubo.classList.contains('activo')) cerrarModal(modalQubo);
         if (modalMarvelcito.classList.contains('activo')) cerrarModal(modalMarvelcito);
         if (modalNumberblocks.classList.contains('activo')) cerrarModal(modalNumberblocks);
     }

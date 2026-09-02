@@ -143,10 +143,63 @@
                 <h2>Proyectos y<br><span class="texto-violeta">Automatizaciones</span></h2>
             </div>
 
-            <!-- TARJETA 1: MARVELCITO -->
+            <!-- TARJETA 1: Qubo -->
             <div class="tarjeta-proyecto reveal">
                 <div class="proyecto-contenido">
                     <span class="proyecto-numero">01</span>
+                    <span class="proyecto-categoria">LANDING PAGE / APP</span>
+                    <h3>Qubo</h3>
+
+                    <div class="proyecto-tags">
+                        <span class="tag tag-teal">Node.js</span>
+                        <span class="tag tag-orange">PostgreSQ</span>
+                        <span class="tag tag-blue">React</span>
+                        <span class="tag tag-red">JWT</span>
+                        <span class="tag tag-green">Qrcode.react</span>
+                    </div>
+
+                    <p>Sistema de gestión de inventario para depósitos, diseñado para 
+                        resolver dos problemas reales: no saber dónde está físicamente cada producto y perder mercadería por 
+                        vencimientos no detectados a tiempo.</p>
+
+                    <ul class="proyecto-lista">
+                        <li>Lógica FEFO con alertas de vencimiento por semáforo</li>
+                        <li>Identificación física por QR (escaneo → ubicación → lotes)</li>
+                    </ul>
+
+                    <div class="proyecto-botones">
+                        <a href="https://qubo-site.onrender.com/" class="btn-link-fucsia">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                            Link
+                        </a>
+                        <!-- BOTÓN PARA ABRIR MODAL 1 -->
+                        <a id="btn-abrir-Qubo" class="btn-ver-mas-lima" style="cursor: pointer;">Ver más</a>
+                    </div>
+                </div>
+
+                <div class="aside">
+                    <div class="proyecto-imagen-wrapper">
+                        <img src="../assets/Qubo_banner.jpg" alt="Preview Qubo" class="proyecto-imagen">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="proyectos-contenedor">
+            <div class="frog-oculto">
+                <div>
+                    <img src="../assets/frog.svg" id="frog2" alt="Sapito 1" class="sapito-clickeable oculto">
+                </div>
+            </div>
+            <!-- TARJETA 2: Marvelcito -->
+            <div class="tarjeta-proyecto reveal">
+                <div class="proyecto-contenido">
+                    <span class="proyecto-numero">02</span>
                     <span class="proyecto-categoria">Aplicación Web / Canvas API</span>
                     <h3>Marvelcito Minijuegos</h3>
 
@@ -187,19 +240,10 @@
                     </div>
                 </div>
             </div>
-
-        </div>
-
-        <div class="proyectos-contenedor">
-            <div class="frog-oculto">
-                <div>
-                    <img src="../assets/frog.svg" id="frog2" alt="Sapito 1" class="sapito-clickeable oculto">
-                </div>
-            </div>
-            <!-- TARJETA 2: NUMBERBLOCKS -->
+            <!-- TARJETA 3: NUMBERBLOCKS -->
             <div class="tarjeta-proyecto reveal">
                 <div class="proyecto-contenido">
-                    <span class="proyecto-numero">02</span>
+                    <span class="proyecto-numero">03</span>
                     <span class="proyecto-categoria">Landing Page Inmersiva</span>
                     <h3>NumberBlocks World</h3>
 
@@ -246,7 +290,76 @@
         <!-- ZONA DE MODALES (OCULTOS POR DEFECTO)      -->
         <!-- ========================================== -->
 
-        <!-- MODAL 1: MARVELCITO -->
+        <!-- MODAL 1: Qubo -->
+        <div id="modal-Qubo" class="modal-overlay">
+            <div class="proyecto-modal">
+                <button id="btn-cerrar-Qubo" class="btn-cerrar">✕</button>
+
+                <div class="modal-imagen-wrapper">
+                    <img src="../assets/Qubo_banner.jpg" alt="Preview de Qubo" class="modal-imagen">
+                </div>
+
+                <h2 class="modal-titulo">Qubo</h2>
+
+                <div class="modal-grid">
+                    <div class="modal-col-izq">
+                        <div class="modal-seccion">
+                            <h3>👤 Rol y responsabilidades</h3>
+                            <ul>
+                                <li>Diseño y desarrollo end-to-end: modelo de datos, API REST, frontend React y despliegue en producción.</li>
+                                <li>Diseño de arquitectura multi-tenant (una sola base de datos para múltiples empresas clientes, aisladas por empresa_id) con foco en seguridad de datos entre clientes.</li>
+                                <li>Modelado del dominio del negocio: priorizó lote (no producto) como entidad central para soportar múltiples vencimientos y ubicaciones de un mismo producto.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-seccion">
+                            <h3>✔️ Funcionalidades destacadas</h3>
+                            <ul>
+                                <li>Lógica FEFO (First Expired, First Out): al buscar un producto, el sistema prioriza automáticamente el lote más próximo a vencer.</li>
+                                <li>Alertas de vencimiento por semáforo (rojo/amarillo/verde): umbrales configurables por categoría de producto, calculados al vuelo contra la fecha actual.</li>
+                                <li>Identificación física por QR: cada ubicación (estantería/columna/nivel) tiene un código QR generado client-side; escanearlo desde el celular muestra los lotes ahí guardados y permite disparar movimientos de stock directamente parado frente a la estantería.</li>
+                                <li>Trazabilidad completa de movimientos: alta de entrada, salida y traslado (total o parcial) de stock, con historial filtrable.</li>
+                                <li>Diseño mobile-first para el operario, desktop para el admin: bottom nav en mobile (con "Escanear QR" destacado como acción principal) y sidebar completo en desktop.</li>
+                                <li>Autenticación con JWT y filtrado automático por empresa en cada endpoint de la API.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-seccion">
+                            <h3>📈 Resultados e impacto</h3>
+                            <ul>
+                                <li>API REST completa (auth, categorías, productos, ubicaciones, usuarios, movimientos) probada end-to-end, con lógica de negocio real para entradas, salidas y traslados de stock.</li>
+                                <li>Frontend con 9 pantallas funcionales conectadas a la API real: Dashboard, Buscador de productos, Escaneo QR, Movimientos, Ubicaciones, Productos, Usuarios y Configuración.</li>
+                                <li>Proyecto desplegado en producción (Render): backend, base de datos, frontend y landing page corriendo en dominios separados.</li>
+                                <li>Landing page pública propia (HTML/CSS/JS) con formulario de contacto funcional.</li>
+                            </ul>
+                        </div>
+                        <a href="https://qubo-site.onrender.com/" class="btn-link-fucsia">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                            Link
+                        </a>
+                    </div>
+                    <div class="modal-col-der">
+                        <div class="modal-seccion">
+                            <h3 class="titulo-tech">⚙️ Tecnologías</h3>
+                            <div class="tech-badges">
+                                <span class="badge badge-html">Node.js</span>
+                                <span class="badge badge-js">Express</span>
+                                <span class="badge badge-css">PostgreSQL</span>
+                                <span class="badge badge-figma">Prisma</span>
+                                <span class="badge badge-canvas">React Router</span>
+                                <span class="badge badge-canvas">JWT</span>
+                                <span class="badge badge-canvas">bcrypt</span>
+                                <span class="badge badge-canvas">qrcode.react</span>
+                                <span class="badge badge-canvas">html5-qrcode</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL 2: MARVELCITO -->
         <div id="modal-marvelcito" class="modal-overlay">
             <div class="proyecto-modal">
                 <button id="btn-cerrar-marvelcito" class="btn-cerrar">✕</button>
@@ -311,7 +424,7 @@
             </div>
         </div>
 
-        <!-- MODAL 2: NUMBERBLOCKS -->
+        <!-- MODAL 3: NUMBERBLOCKS -->
         <div id="modal-numberblocks" class="modal-overlay">
             <div class="proyecto-modal">
                 <button id="btn-cerrar-numberblocks" class="btn-cerrar">✕</button>
