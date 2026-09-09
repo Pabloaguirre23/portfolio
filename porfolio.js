@@ -136,6 +136,11 @@ const modalNumberblocks = document.getElementById('modal-numberblocks');
 const btnAbrirNumberblocks = document.getElementById('btn-abrir-numberblocks');
 const btnCerrarNumberblocks = document.getElementById('btn-cerrar-numberblocks');
 
+// 4. Seleccionamos los elementos de Tostadores del Plata Bot
+const modalTostadores = document.getElementById('modal-tostadores');
+const btnAbrirTostadores = document.getElementById('btn-abrir-tostadores');
+const btnCerrarTostadores = document.getElementById('btn-cerrar-tostadores');
+
 // Función genérica para abrir un modal
 function abrirModal(modal) {
     modal.classList.add('activo');
@@ -160,11 +165,16 @@ btnCerrarMarvelcito.addEventListener('click', () => cerrarModal(modalMarvelcito)
 btnAbrirNumberblocks.addEventListener('click', () => abrirModal(modalNumberblocks));
 btnCerrarNumberblocks.addEventListener('click', () => cerrarModal(modalNumberblocks));
 
+// Eventos Tostadores del Plata Bot
+btnAbrirTostadores.addEventListener('click', () => abrirModal(modalTostadores));
+btnCerrarTostadores.addEventListener('click', () => cerrarModal(modalTostadores));
+
 // Cerrar haciendo clic afuera (aplica para ambos)
 window.addEventListener('click', (evento) => {
     if(evento.target === modalQubo) cerrarModal(modalQubo);
     if (evento.target === modalMarvelcito) cerrarModal(modalMarvelcito);
     if (evento.target === modalNumberblocks) cerrarModal(modalNumberblocks);
+    if (evento.target === modalTostadores) cerrarModal(modalTostadores);
 });
 
 // Cerrar con Escape (aplica para ambos)
@@ -173,6 +183,7 @@ window.addEventListener('keydown', (evento) => {
         if (modalQubo.classList.contains('activo')) cerrarModal(modalQubo);
         if (modalMarvelcito.classList.contains('activo')) cerrarModal(modalMarvelcito);
         if (modalNumberblocks.classList.contains('activo')) cerrarModal(modalNumberblocks);
+        if (modalTostadores.classList.contains('activo')) cerrarModal(modalTostadores);
     }
 });
 
