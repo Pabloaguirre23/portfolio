@@ -10,6 +10,7 @@
 html{
   scroll-behavior: smooth;
   scroll-padding-top: 5%;
+  overflow-x: hidden;
 }
 @keyframes entrar-seccion {
     from {
@@ -1273,6 +1274,7 @@ body {
     max-width: 79%;
   }
   .aside{
+    width: 100%;
     height: 210px;
   }
   .proyecto-imagen{
