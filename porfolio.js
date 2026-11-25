@@ -126,7 +126,12 @@ const modalSuim = document.getElementById('modal-suim');
 const btnAbrirSuim = document.getElementById('btn-abrir-suim');
 const btnCerrarSuim = document.getElementById('btn-cerrar-suim');
 
-// 2. Seleccionamos los elementos de Qubo
+// 2. Seleccionamos los elementos de Hornero
+const modalHornero = document.getElementById('modal-hornero');
+const btnAbrirHornero = document.getElementById('btn-abrir-hornero');
+const btnCerrarHornero = document.getElementById('btn-cerrar-hornero');
+
+// 3. Seleccionamos los elementos de Qubo
 const modalQubo = document.getElementById('modal-Qubo');
 const btnAbrirQubo = document.getElementById('btn-abrir-Qubo');
 const btnCerrarQubo = document.getElementById('btn-cerrar-Qubo');
@@ -162,6 +167,10 @@ function cerrarModal(modal) {
 btnAbrirSuim.addEventListener('click', () => abrirModal(modalSuim));
 btnCerrarSuim.addEventListener('click', () => cerrarModal(modalSuim));
 
+// Eventos Hornero
+btnAbrirHornero.addEventListener('click', () => abrirModal(modalHornero));
+btnCerrarHornero.addEventListener('click', () => cerrarModal(modalHornero));
+
 // Eventos Qubo
 btnAbrirQubo.addEventListener('click', () => abrirModal(modalQubo));
 btnCerrarQubo.addEventListener('click', () => cerrarModal(modalQubo));
@@ -181,6 +190,7 @@ btnCerrarTostadores.addEventListener('click', () => cerrarModal(modalTostadores)
 // Cerrar haciendo clic afuera (aplica para ambos)
 window.addEventListener('click', (evento) => {
     if (evento.target === modalSuim) cerrarModal(modalSuim);
+    if (evento.target === modalHornero) cerrarModal(modalHornero);
     if(evento.target === modalQubo) cerrarModal(modalQubo);
     if (evento.target === modalMarvelcito) cerrarModal(modalMarvelcito);
     if (evento.target === modalNumberblocks) cerrarModal(modalNumberblocks);
@@ -191,6 +201,7 @@ window.addEventListener('click', (evento) => {
 window.addEventListener('keydown', (evento) => {
     if (evento.key === 'Escape') {
         if (modalSuim.classList.contains('activo')) cerrarModal(modalSuim);
+        if (modalHornero.classList.contains('activo')) cerrarModal(modalHornero);
         if (modalQubo.classList.contains('activo')) cerrarModal(modalQubo);
         if (modalMarvelcito.classList.contains('activo')) cerrarModal(modalMarvelcito);
         if (modalNumberblocks.classList.contains('activo')) cerrarModal(modalNumberblocks);

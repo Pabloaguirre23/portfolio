@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style/style.css">
-    <script src="porfolio.js?v=suim" defer></script>
+    <script src="porfolio.js?v=hornero" defer></script>
 </head>
 
 <body class="fondo-grilla">
@@ -186,10 +186,53 @@
                 </div>
             </div>
 
-            <!-- TARJETA 2: Qubo -->
+            <!-- TARJETA 2: HORNERO -->
             <div class="tarjeta-proyecto reveal">
                 <div class="proyecto-contenido">
                     <span class="proyecto-numero">02</span>
+                    <span class="proyecto-categoria">PLATAFORMA WEB / AGENDA COMUNITARIA</span>
+                    <h3>Hornero</h3>
+
+                    <div class="proyecto-tags">
+                        <span class="tag tag-teal">Next.js</span>
+                        <span class="tag tag-orange">React</span>
+                        <span class="tag tag-blue">TypeScript</span>
+                        <span class="tag tag-red">Tailwind</span>
+                        <span class="tag tag-green">Neon</span>
+                        <span class="tag tag-teal">MCP</span>
+                    </div>
+
+                    <p>Agenda abierta y curada de la comunidad tech argentina. Reúne hackathons, meetups, workshops y conferencias en orden cronológico, y deja proponer una fecha, seguir una comunidad o buscar equipo sin saltarse la revisión.</p>
+
+                    <ul class="proyecto-lista">
+                        <li>Búsqueda por título, fecha y lugar, con la URL como estado de los filtros</li>
+                        <li>Flyer y texto distinto para X, LinkedIn e Instagram en cada evento</li>
+                    </ul>
+
+                    <div class="proyecto-botones">
+                        <a href="https://hornero.tech/" class="btn-link-fucsia">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                            Link
+                        </a>
+                        <a id="btn-abrir-hornero" class="btn-ver-mas-lima" style="cursor: pointer;">Ver más</a>
+                    </div>
+                </div>
+
+                <div class="aside">
+                    <div class="proyecto-imagen-wrapper">
+                        <img src="../assets/hornero.png" alt="Preview Hornero" class="proyecto-imagen">
+                    </div>
+                </div>
+            </div>
+
+            <!-- TARJETA 3: Qubo -->
+            <div class="tarjeta-proyecto reveal">
+                <div class="proyecto-contenido">
+                    <span class="proyecto-numero">03</span>
                     <span class="proyecto-categoria">LANDING PAGE / APP</span>
                     <h3>Qubo</h3>
 
@@ -234,7 +277,7 @@
             <!-- TARJETA 2: TOSTADORES DEL PLATA BOT -->
             <div class="tarjeta-proyecto reveal">
                 <div class="proyecto-contenido">
-                    <span class="proyecto-numero">03</span>
+                    <span class="proyecto-numero">04</span>
                     <span class="proyecto-categoria">AUTOMATIZACIÓN / AGENTE IA</span>
                     <h3>Tostadores del Plata Bot</h3>
 
@@ -280,7 +323,7 @@
             <!-- TARJETA 2: Marvelcito -->
             <div class="tarjeta-proyecto reveal">
                 <div class="proyecto-contenido">
-                    <span class="proyecto-numero">04</span>
+                    <span class="proyecto-numero">05</span>
                     <span class="proyecto-categoria">Aplicación Web / Canvas API</span>
                     <h3>Marvelcito Minijuegos</h3>
 
@@ -324,7 +367,7 @@
             <!-- TARJETA 3: NUMBERBLOCKS -->
             <div class="tarjeta-proyecto reveal">
                 <div class="proyecto-contenido">
-                    <span class="proyecto-numero">05</span>
+                    <span class="proyecto-numero">06</span>
                     <span class="proyecto-categoria">Landing Page Inmersiva</span>
                     <h3>NumberBlocks World</h3>
 
@@ -434,7 +477,72 @@
             </div>
         </div>
 
-        <!-- MODAL 2: Qubo -->
+        <!-- MODAL 2: HORNERO -->
+        <div id="modal-hornero" class="modal-overlay">
+            <div class="proyecto-modal">
+                <button id="btn-cerrar-hornero" class="btn-cerrar">✕</button>
+
+                <div class="modal-imagen-wrapper">
+                    <img src="../assets/hornero.png" alt="Preview de Hornero" class="modal-imagen">
+                </div>
+
+                <h2 class="modal-titulo">Hornero</h2>
+
+                <div class="modal-grid">
+                    <div class="modal-col-izq">
+                        <div class="modal-seccion">
+                            <h3>👤 Rol y responsabilidades</h3>
+                            <ul>
+                                <li>Cofundador, con foco en la experiencia pública: lectura de eventos de varios días, contador de lo que está en curso y pie de página con la mascota que visita el nido.</li>
+                                <li>Flujo para compartir una fecha: pieza gráfica, vista previa según la red y textos de X, LinkedIn e Instagram que se guardan al aprobar el evento.</li>
+                                <li>Ajustes de interfaz en la agenda, el detalle y la guía del MCP, incluida la vista previa del enlace cuando cambia la portada.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-seccion">
+                            <h3>✔️ Funcionalidades destacadas</h3>
+                            <ul>
+                                <li>Agenda cronológica con filtros que se combinan en el servidor y quedan en la URL: título, categoría, rango de fechas y ciudad o provincia.</li>
+                                <li>Propuesta pública de eventos y de comunidades. Lo que entra queda en moderación antes de publicarse.</li>
+                                <li>MCP para agents: se pide un token personal por email y las propuestas siguen el mismo camino de revisión, con un cupo por IP para bots.</li>
+                                <li>Búsqueda de equipo asociada a un evento, con un enlace privado para cerrarla, y temas claro y oscuro con la misma identidad.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-seccion">
+                            <h3>📈 Resultados e impacto</h3>
+                            <ul>
+                                <li>Hornero está en producción en hornero.tech como la agenda de eventos tech de Argentina.</li>
+                                <li>Cada evento aprobado se puede publicar en redes con una pieza propia y un texto armado para esa red.</li>
+                                <li>La interfaz pública sostiene el naranja, el crema y la mascota tanto en claro como en oscuro.</li>
+                            </ul>
+                        </div>
+                        <a href="https://hornero.tech/" class="btn-link-fucsia">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                            Link
+                        </a>
+                    </div>
+                    <div class="modal-col-der">
+                        <div class="modal-seccion">
+                            <h3 class="titulo-tech">⚙️ Tecnologías</h3>
+                            <div class="tech-badges">
+                                <span class="badge badge-html">Next.js</span>
+                                <span class="badge badge-js">React</span>
+                                <span class="badge badge-css">TypeScript</span>
+                                <span class="badge badge-figma">Tailwind CSS</span>
+                                <span class="badge badge-canvas">Drizzle</span>
+                                <span class="badge badge-canvas">Neon Postgres</span>
+                                <span class="badge badge-html">MCP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL 3: Qubo -->
         <div id="modal-Qubo" class="modal-overlay">
             <div class="proyecto-modal">
                 <button id="btn-cerrar-Qubo" class="btn-cerrar">✕</button>
